@@ -61,14 +61,14 @@ Direct developer email support can be purchased through a [Support Plan][4] or b
 © LightningChart Ltd 2009-2022. All rights reserved.
 
 
-[Dashboard]: https://lightningchart.com/js-charts/api-documentation/v7.0.1/classes/Dashboard.html
-[XY cartesian chart]: https://lightningchart.com/js-charts/api-documentation/v7.0.1/classes/ChartXY.html
-[Heatmap Grid Series Intensity]: https://lightningchart.com/js-charts/api-documentation/v7.0.1/classes/HeatmapGridSeriesIntensityValues.html
-[Line Series]: https://lightningchart.com/js-charts/api-documentation/v7.0.1/classes/LineSeries.html
-[Axis scroll strategies]: https://lightningchart.com/js-charts/api-documentation/v7.0.1/variables/AxisScrollStrategies.html
-[Paletted Fill]: https://lightningchart.com/js-charts/api-documentation/v7.0.1/classes/PalettedFill.html
-[LUT]: https://lightningchart.com/js-charts/api-documentation/v7.0.1/classes/LUT.html
-[Empty line style]: https://lightningchart.com/js-charts/api-documentation/v7.0.1/variables/emptyLine.html
-[Legend Box]: https://lightningchart.com/js-charts/api-documentation/v7.0.1/classes/Chart.html#addLegendBox
-[Legend Box builders]: https://lightningchart.com/js-charts/api-documentation/v7.0.1/variables/LegendBoxBuilders.html
+[Dashboard]: https://lightningchart.com/js-charts/api-documentation/v7.1.0/classes/Dashboard.html
+[XY cartesian chart]: https://lightningchart.com/js-charts/api-documentation/v7.1.0/classes/ChartXY.html
+[Heatmap Grid Series Intensity]: https://lightningchart.com/js-charts/api-documentation/v7.1.0/classes/HeatmapGridSeriesIntensityValues.html
+[Line Series]: https://lightningchart.com/js-charts/api-documentation/v7.1.0/classes/LineSeries.html
+[Axis scroll strategies]: https://lightningchart.com/js-charts/api-documentation/v7.1.0/variables/AxisScrollStrategies.html
+[Paletted Fill]: https://lightningchart.com/js-charts/api-documentation/v7.1.0/classes/PalettedFill.html
+[LUT]: https://lightningchart.com/js-charts/api-documentation/v7.1.0/classes/LUT.html
+[Empty line style]: https://lightningchart.com/js-charts/api-documentation/v7.1.0/variables/emptyLine.html
+[Legend Box]: https://lightningchart.com/js-charts/api-documentation/v7.1.0/classes/Chart.html#addLegendBox
+[Legend Box builders]: https://lightningchart.com/js-charts/api-documentation/v7.1.0/variables/LegendBoxBuilders.html
 
