@@ -12,10 +12,10 @@ const {
     emptyFill,
     emptyLine,
     AxisScrollStrategies,
-    LegendBoxBuilders,
     synchronizeAxisIntervals,
     regularColorSteps,
     Themes,
+    LegendPosition,
 } = lcjs
 
 const { createSpectrumDataGenerator } = require('@lightningchart/xydata')
@@ -43,6 +43,9 @@ const chartSpectrogram = dashboard
     .createChartXY({
         columnIndex: 0,
         rowIndex: 0,
+        legend: { 
+            position: LegendPosition.TopCenter
+        },
     })
     .setTitle('2D Spectrogram with X & Y projection on mouse hover')
 
@@ -64,23 +67,15 @@ const seriesSpectrogram = chartSpectrogram
         }),
     )
 
-const legend = chartSpectrogram
-    .addLegendBox(LegendBoxBuilders.HorizontalLegendBox)
-    // Dispose example UI elements automatically if they take too much space. This is to avoid bad UI on mobile / etc. devices.
-    .setAutoDispose({
-        type: 'max-width',
-        maxWidth: 0.8,
-    })
-    .add(chartSpectrogram)
-
 const chartProjectionY = dashboard
     .createChartXY({
         columnIndex: 1,
         rowIndex: 0,
+        legend: { visible: false },
     })
     .setTitleFillStyle(emptyFill)
     // NOTE: Hardcoded alignment with Spectrogram chart.
-    .setPadding({ top: 44 })
+    .setPadding({ top: 110 })
     .setUserInteractions(undefined)
 
 chartProjectionY.getDefaultAxisY().setScrollStrategy(undefined)
@@ -90,17 +85,13 @@ synchronizeAxisIntervals(chartSpectrogram.getDefaultAxisY(), chartProjectionY.ge
 
 chartProjectionY.getDefaultAxisX().setScrollStrategy(AxisScrollStrategies.expansion).setInterval({ start: 0, end: 1, stopAxisAfter: false })
 
-const seriesProjectionY = chartProjectionY
-    .addPointLineAreaSeries({
-        dataPattern: 'ProgressiveY',
-    })
-    .setName('Projection (Y)')
-    .setAreaFillStyle(emptyFill)
+const seriesProjectionY = chartProjectionY.addLineSeries({}).setName('Projection (Y)')
 
 const chartProjectionX = dashboard
     .createChartXY({
         columnIndex: 0,
         rowIndex: 1,
+        legend: { visible: false },
     })
     .setTitleFillStyle(emptyFill)
     .setUserInteractions(undefined)
@@ -110,12 +101,7 @@ chartProjectionX.getDefaultAxisX().setScrollStrategy(undefined)
 synchronizeAxisIntervals(chartSpectrogram.getDefaultAxisX(), chartProjectionX.getDefaultAxisX())
 
 chartProjectionX.getDefaultAxisY().setScrollStrategy(AxisScrollStrategies.expansion).setInterval({ start: 0, end: 1, stopAxisAfter: false })
-const seriesProjectionX = chartProjectionX
-    .addPointLineAreaSeries({
-        dataPattern: 'ProgressiveX',
-    })
-    .setName('Projection (X)')
-    .setAreaFillStyle(emptyFill)
+const seriesProjectionX = chartProjectionX.addLineSeries({}).setName('Projection (X)')
 
 // Align charts nicely.
 chartSpectrogram.getDefaultAxisY().setThickness(50)
@@ -157,12 +143,12 @@ createSpectrumDataGenerator()
             // Update projection series data.
             seriesProjectionY.clear()
             if (projectionY) {
-                seriesProjectionY.add(projectionY)
+                seriesProjectionY.appendJSON(projectionY)
             }
 
             seriesProjectionX.clear()
             if (projectionX) {
-                seriesProjectionX.add(projectionX)
+                seriesProjectionX.appendJSON(projectionX)
             }
         }
 
