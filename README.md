@@ -21,7 +21,7 @@ The demo can be used as an example or a seed project. Local execution requires t
 
 This example shows how to create a 2D spectrogram chart with X and Y line projections over last mouse coordinate (custom interaction).
 
-Every time the user moves mouse over the spectrogram 1024 + 1024 data points are picked from the data set and pushed to X and Y projections line series - this is an expensive operation, but handled really fast with calls to `LineSeries.clear().add(data)`.
+Every time the user moves mouse over the spectrogram 1024 + 1024 data points are picked from the data set and pushed to X and Y projections line series - this is an expensive operation, but handled really fast with calls to `LineSeries.clear().appendJSON(data)`.
 
 The spectrogram chart contains 1024 x 1024 = ~1 million data points.
 
@@ -59,12 +59,12 @@ Direct developer email support can be purchased through a [Support Plan][4] or b
 © LightningChart Ltd 2009-2026. All rights reserved.
 
 
-[Dashboard]: https://lightningchart.com/js-charts/api-documentation/v8.3.0/classes/Dashboard.html
-[XY cartesian chart]: https://lightningchart.com/js-charts/api-documentation/v8.3.0/classes/ChartXY.html
-[Heatmap Grid Series Intensity]: https://lightningchart.com/js-charts/api-documentation/v8.3.0/classes/HeatmapGridSeriesIntensityValues.html
-[Line Series]: https://lightningchart.com/js-charts/api-documentation/v8.3.0/classes/PointLineAreaSeries.html
-[Axis scroll strategies]: https://lightningchart.com/js-charts/api-documentation/v8.3.0/variables/AxisScrollStrategies.html
-[Paletted Fill]: https://lightningchart.com/js-charts/api-documentation/v8.3.0/classes/PalettedFill.html
-[LUT]: https://lightningchart.com/js-charts/api-documentation/v8.3.0/classes/LUT.html
-[Empty line style]: https://lightningchart.com/js-charts/api-documentation/v8.3.0/variables/emptyLine.html
+[Dashboard]: https://lightningchart.com/js-charts/api-documentation/v9.0.0/classes/Dashboard.html
+[XY cartesian chart]: https://lightningchart.com/js-charts/api-documentation/v9.0.0/classes/ChartXY.html
+[Heatmap Grid Series Intensity]: https://lightningchart.com/js-charts/api-documentation/v9.0.0/classes/HeatmapGridSeriesIntensityValues.html
+[Line Series]: https://lightningchart.com/js-charts/api-documentation/v9.0.0/classes/PointLineAreaSeries.html
+[Axis scroll strategies]: https://lightningchart.com/js-charts/api-documentation/v9.0.0/variables/AxisScrollStrategies.html
+[Paletted Fill]: https://lightningchart.com/js-charts/api-documentation/v9.0.0/classes/PalettedFill.html
+[LUT]: https://lightningchart.com/js-charts/api-documentation/v9.0.0/classes/LUT.html
+[Empty line style]: https://lightningchart.com/js-charts/api-documentation/v9.0.0/variables/emptyLine.html
 
